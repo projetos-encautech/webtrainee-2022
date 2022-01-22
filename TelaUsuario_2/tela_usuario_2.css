@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+    background-color:#184528DB;
+}
+
+#user_icon{
+    margin-right: 54px;
+    padding: 5px;
+    background-color: #C4C4C4;;
+    border-radius: 50%;
+}
+
+#user_name{
+    font-size: 40px;
+    margin-right: 65px;
+    color: #FFFFFF;
+}
+#menu_hamburguer{
+    margin-left: 58px;
+}
+.menu_link{
+    margin: 0 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+#filter_animal{
+   margin: 66px 218px 107px;
+}
+#filter_animal form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_container{
+    width: 236px;
+    height: 229px;
+}
+
+.input_container label{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+.section_title{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 36px;
+}
+.user_input{
+    width: 200px;
+    height: 30px;
+    background: #C4C4C4;
+    border-radius: 5px;
+    border-style: none;
+    margin: 20px 0 22px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+#type_race {
+    background-image: url(./images/Lupa.svg);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: 10.67rem;
+}
+
+#sexo, #vacina {
+    background-image: url(./images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
