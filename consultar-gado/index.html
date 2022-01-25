@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadosolution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,100;1,400;1,700&family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="./img/icone-aba.gif">
+</head>
+
+<body>
+    <header>
+        <div class="menu-principal">
+            <figure class="photo-profile">
+                <img src="./img/foto-perfil.png" alt="Foto perfil" width="58px" height="58px">
+            </figure>
+            <h2>Nome do usuário</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Adicionar animal</a></li>
+                    <li><a href="../gerenciar-tarefas/index.html">Gerenciar tarefas</a>
+                    <li><a href="./index.html">Visualizar animais</a>
+                    <li><a href="#">Configurações</a>
+                        <ul>
+                            <img src="https://img.icons8.com/material-rounded/24/000000/horizontal-line.png" width="55px"
+                            height="30px" />
+                            <li><a href="#">Editar perfil</a></li>
+                            <li><a href="#">Sair</a></li>
+                        </ul>
+                    </li>  
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="topo-busca">
+            <div class="image">
+                <img src="https://img.icons8.com/material-rounded/24/000000/horizontal-line.png" width="55px"
+                    height="33px"/>
+            </div>
+            <h2>Consultar animal</h2>
+            <div class="buscas">
+                <div>
+                    <h3>Id:</h3>
+                    <input type="text" id="txtBusca1" placeholder="Id..." class="maxWidth input" />
+                </div>
+                <div>
+                    <h3>Raça:</h3>
+                    <input type="text" id="txtBusca2" placeholder="Raça..." class="maxWidth input" />
+                </div>
+                <div>
+                    <h3>Sexo:</h3>
+                    <input type="text" id="txtBusca3" placeholder="Sexo..." class="maxWidth input" />
+                </div>
+            </div>
+            <div id="table" class="maxWidth">
+                <table id="tabela">
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    <div class="descricoes">
+        <div id="showmehideme1" class="hidden">
+            <h2>Dados do animal</h2>
+            <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                <dt>Id</dt>
+                <dd>123</dd>
+                <dt>Peso</dt>
+                <dd>80,00Kg</dd>
+                <dt>Raça</dt>
+                <dd>Angus</dd>
+            </dl>
+            <dl style="margin-left: 302px; margin-top: -205px; line-height: 34px;">
+                <dt>Sexo</dt>
+                <dd>M</dd>
+                <dt>Cadastro</dt>
+                <dd>12/05/2018</dd>
+                <dt>Porte</dt>
+                <dd>Grande</dd>
+            </dl>
+            <h3 style="margin-left: 504px; margin-top: -200px;">Vacinas</h3>
+            <aside>
+                <p>Vacina A</p>
+                <p>Vacina B</p>
+                <p>Vacina C</p>
+                <p>Vacina D</p>
+                <p>Vacina E</p>
+                <p>Vacina F</p>
+            </aside>
+            <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                <dt>Observações</dt>
+                <dd>Lesão na pata esquerda</dd>
+            </dl>
+            <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+            <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+            <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme1')"/> 
+        </div>
+        <div id="showmehideme2" class="hidden">
+            <h2 style="padding-top: 31px; padding-left: 99px;">Dados do animal</h2>
+            <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                <dt>Id</dt>
+                <dd>456</dd>
+                <dt>Peso</dt>
+                <dd>97,00Kg</dd>
+                <dt>Raça</dt>
+                <dd>Hereford</dd>
+            </dl>
+            <dl style="margin-left: 302px; margin-top:  -205px; line-height: 34px;">
+                <dt>Sexo</dt>
+                <dd>M</dd>
+                <dt>Cadastro</dt>
+                <dd>02/07/2015</dd>
+                <dt>Porte</dt>
+                <dd>Pequeno</dd>
+            </dl>
+            <h3 style="margin-left: 504px; margin-top: -200px; font-size: 15px; font-weight: 1;">Vacinas</h3>
+            <aside>
+                <p>Vacina A</p>
+                <p>Vacina B</p>
+                <p>Vacina C</p>
+                <p>Vacina D</p>
+            </aside>
+            <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                <dt>Observações</dt>
+                <dd>Lesão na pata esquerda</dd>
+            </dl>
+            <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+            <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+            <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme2')" /> 
+        </div>
+        <div id="showmehideme3" class="hidden">
+            <h2 style="padding-top: 31px; padding-left: 99px;">Dados do animal</h2>
+            <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                <dt>Id</dt>
+                <dd>789</dd>
+                <dt>Peso</dt>
+                <dd>72,50Kg</dd>
+                <dt>Raça</dt>
+                <dd>Simental</dd>
+            </dl>
+            <dl style="margin-left: 302px; margin-top: -205px; line-height: 34px;">
+                <dt>Sexo</dt>
+                <dd>F</dd>
+                <dt>Cadastro</dt>
+                <dd>23/11/2019</dd>
+                <dt>Porte</dt>
+                <dd>Médio</dd>
+            </dl>
+            <h3 style="margin-left: 504px; margin-top: -200px; font-size: 15px; font-weight: 1;">Vacinas</h3>
+            <aside>
+                <p>Vacina A</p>
+                <p>Vacina B</p>
+                <p>Vacina C</p>
+                <p>Vacina D</p>
+                <p>Vacina E</p>
+            </aside>
+            <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                <dt>Observações</dt>
+                <dd>Lesão na pata esquerda</dd>
+            </dl>
+            <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+            <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+            <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme3')" /> 
+        </div>
+        <div id="showmehideme4" class="hidden">
+            <h2 style="padding-top: 31px; padding-left: 99px;">Dados do animal</h2>
+            <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                <dt>Id</dt>
+                <dd>101</dd>
+                <dt>Peso</dt>
+                <dd>100,70Kg</dd>
+                <dt>Raça</dt>
+                <dd>Limousin</dd>
+            </dl>
+            <dl style="margin-left: 302px; margin-top: -205px; line-height: 34px;">
+                <dt>Sexo</dt>
+                <dd>M</dd>
+                <dt>Cadastro</dt>
+                <dd>11/04/2012</dd>
+                <dt>Porte</dt>
+                <dd>Médio</dd>
+            </dl>
+            <h3 style="margin-left: 504px; margin-top: -200px; font-size: 15px; font-weight: 1;">Vacinas</h3>
+            <aside>
+                <p>Vacina A</p>
+                <p>Vacina B</p>
+                <p>Vacina C</p>
+                <p>Vacina D</p>
+                <p>Vacina E</p>
+                <p>Vacina F</p>
+            </aside>
+            <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                <dt>Observações</dt>
+                <dd>Lesão na pata esquerda</dd>
+            </dl>
+            <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+            <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+            <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme4')" /> 
+        </div>
+        <div id="showmehideme5" class="hidden">
+            <h2 style="padding-top: 31px; padding-left: 99px;">Dados do animal</h2>
+            <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                <dt>Id</dt>
+                <dd>112</dd>
+                <dt>Peso</dt>
+                <dd>120,00Kg</dd>
+                <dt>Raça</dt>
+                <dd>Brangus</dd>
+            </dl>
+            <dl style="margin-left: 302px; margin-top: -205px; line-height: 34px;">
+                <dt>Sexo</dt>
+                <dd>F</dd>
+                <dt>Cadastro</dt>
+                <dd>16/02/2011</dd>
+                <dt>Porte</dt>
+                <dd>Grande</dd>
+            </dl>
+            <h3 style="margin-left: 504px; margin-top: -200px; font-size: 15px; font-weight: 1;">Vacinas</h3>
+            <aside>
+                <p>Vacina A</p>
+                <p>Vacina B</p>
+                <p>Vacina C</p>
+                <p>Vacina D</p>
+                <p>Vacina E</p>
+                <p>Vacina F</p>
+                <p>Vacina G</p>
+            </aside>
+            <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                <dt>Observações</dt>
+                <dd>Lesão na pata esquerda</dd>
+            </dl>
+            <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+            <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+            <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme5')"/> 
+        </div>
+        <div id="showmehideme6" class="hidden">
+                <h2>Dados do animal</h2>
+                <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                    <dt>Id</dt>
+                    <dd>131</dd>
+                    <dt>Peso</dt>
+                    <dd>83,20Kg</dd>
+                    <dt>Raça</dt>
+                    <dd>Angus</dd>
+                </dl>
+                <dl style="margin-left: 302px; margin-top: -205px; line-height: 34px;">
+                    <dt>Sexo</dt>
+                    <dd>M</dd>
+                    <dt>Cadastro</dt>
+                    <dd>01/12/2010</dd>
+                    <dt>Porte</dt>
+                    <dd>Grande</dd>
+                </dl>
+                <h3 style="margin-left: 504px; margin-top: -200px;">Vacinas</h3>
+                <aside>
+                    <p>Vacina A</p>
+                    <p>Vacina B</p>
+                    <p>Vacina C</p>
+                    <p>Vacina D</p>
+                </aside>
+                <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                    <dt>Observações</dt>
+                    <dd>2 anos no rebanho A</dd>
+                </dl>
+                <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+                <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+                <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme6')"/> 
+        </div>
+        <div id="showmehideme7" class="hidden">
+            <h2>Dados do animal</h2>
+            <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                <dt>Id</dt>
+                <dd>415</dd>
+                <dt>Peso</dt>
+                <dd>77,04Kg</dd>
+                <dt>Raça</dt>
+                <dd>Azul Belga</dd>
+            </dl>
+            <dl style="margin-left: 302px; margin-top: -205px; line-height: 34px;">
+                <dt>Sexo</dt>
+                <dd>F</dd>
+                <dt>Cadastro</dt>
+                <dd>17/01/2020</dd>
+                <dt>Porte</dt>
+                <dd>Médio</dd>
+            </dl>
+            <h3 style="margin-left: 504px; margin-top: -200px;">Vacinas</h3>
+            <aside>
+                <p>Vacina A</p>
+                <p>Vacina B</p>
+                <p>Vacina C</p>
+                <p>Vacina D</p>
+                <p>Vacina E</p>
+                <p>Vacina F</p>
+            </aside>
+            <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                <dt>Observações</dt>
+                <dd>Período de desmama</dd>
+            </dl>
+            <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+            <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+            <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme7')"/> 
+        </div>
+        <div id="showmehideme8" class="hidden">
+            <h2>Dados do animal</h2>
+            <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                <dt>Id</dt>
+                <dd>61</dd>
+                <dt>Peso</dt>
+                <dd>110,00Kg</dd>
+                <dt>Raça</dt>
+                <dd>Simental</dd>
+            </dl>
+            <dl style="margin-left: 302px; margin-top: -205px; line-height: 34px;">
+                <dt>Sexo</dt>
+                <dd>F</dd>
+                <dt>Cadastro</dt>
+                <dd>19/04/2017</dd>
+                <dt>Porte</dt>
+                <dd>Pequeno</dd>
+            </dl>
+            <h3 style="margin-left: 504px; margin-top: -200px;">Vacinas</h3>
+            <aside>
+                <p>Vacina A</p>
+                <p>Vacina B</p>
+                <p>Vacina C</p>
+                <p>Vacina D</p>
+                <p>Vacina E</p>
+            </aside>
+            <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                <dt>Observações</dt>
+                <dd>Realizar diagnóstico de gestação</dd>
+            </dl>
+            <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+            <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+            <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme8')"/> 
+        </div>
+        <div id="showmehideme9" class="hidden">
+            <h2>Dados do animal</h2>
+            <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                <dt>Id</dt>
+                <dd>718</dd>
+                <dt>Peso</dt>
+                <dd>60,23Kg</dd>
+                <dt>Raça</dt>
+                <dd>Limousin</dd>
+            </dl>
+            <dl style="margin-left: 302px; margin-top: -205px; line-height: 34px;">
+                <dt>Sexo</dt>
+                <dd>M</dd>
+                <dt>Cadastro</dt>
+                <dd>12/02/2016</dd>
+                <dt>Porte</dt>
+                <dd>Pequeno</dd>
+            </dl>
+            <h3 style="margin-left: 504px; margin-top: -200px;">Vacinas</h3>
+            <aside>
+                <p>Vacina A</p>
+                <p>Vacina B</p>
+                <p>Vacina C</p>
+            </aside>
+            <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                <dt>Observações</dt>
+                <dd>Trocar de rebanho</dd>
+            </dl>
+            <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+            <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+            <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme9')"/> 
+        </div>
+        <div id="showmehideme10" class="hidden">
+            <h2>Dados do animal</h2>
+            <dl style="padding-top: 50px; padding-left: 99px; line-height: 34px;">
+                <dt>Id</dt>
+                <dd>192</dd>
+                <dt>Peso</dt>
+                <dd>88,70Kg</dd>
+                <dt>Raça</dt>
+                <dd>Hereford</dd>
+            </dl>
+            <dl style="margin-left: 302px; margin-top: -205px; line-height: 34px;">
+                <dt>Sexo</dt>
+                <dd>F</dd>
+                <dt>Cadastro</dt>
+                <dd>13/09/2012</dd>
+                <dt>Porte</dt>
+                <dd>Médio</dd>
+            </dl>
+            <h3 style="margin-left: 504px; margin-top: -200px;">Vacinas</h3>
+            <aside>
+                <p>Vacina A</p>
+                <p>Vacina B</p>
+                <p>Vacina C</p>
+                <p>Vacina F</p>
+            </aside>
+            <dl style="margin-left: 502px; margin-top: 5px; line-height: 34px;">
+                <dt>Observações</dt>
+                <dd>Animal infértil</dd>
+            </dl>
+            <img id="imggado1" src="./img/foto-gado-perfil.jpg" alt="foto do gado"> 
+            <button id="btn-edit">Editar animal <img src="https://img.icons8.com/ios-glyphs/30/000000/pencil--v1.png" style="height:16.5px; width: 16.5px; align-items: center;"/> </button>
+            <input type="image" src="./img/fechar-janela.png" id="input-esconder" onClick="ocultar('showmehideme10')"/> 
+        </div>
+    </div>
+ </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
