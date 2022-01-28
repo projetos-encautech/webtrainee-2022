@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar tarefas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,100;1,400;1,700&family=Roboto:wght@100;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" type="image/gif" href="./img/icone-aba.gif">
+</head>
+
+<body>
+    <header>
+        <div class="menu-principal">
+            <figure class="photo-profile">
+                <img src="./img/foto-perfil.png" alt="Foto perfil" width="58px" height="58px">
+            </figure>
+            <h2>Nome do usuário</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Adicionar animal</a></li>
+                    <li><a href="./index.html">Gerenciar tarefas</a>
+                    <li><a href="../Gadosolution/index.html">Visualizar animais</a>
+                    <li><a href="#">Configurações</a>
+                        <ul>
+                            <img src="https://img.icons8.com/material-rounded/24/000000/horizontal-line.png"
+                                width="55px" height="30px" />
+                            <li><a href="#">Editar perfil</a></li>
+                            <li><a href="#">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="topo-busca">
+            <div class="image">
+                <img id="barra" src="https://img.icons8.com/material-rounded/24/000000/horizontal-line.png" width="55px"
+                    height="33px" />
+            </div>
+            <h2>Atividades</h2>
+            <div class="buscas">
+                <span>
+                    <label for="check1"><input type="checkbox" name="color" value="Concluída" id="check1" /> Concluídas</label>
+                
+                    <label for="check2"><input type="checkbox" name="color" value="Em andamento" id="check2" /> Em andamento</label>
+                
+                    <label for="check3"><input type="checkbox" name="color" value="Cancelada" id="check3" /> Canceladas</label>
+                    <button id="btn-branco" title="Buscar atividade">Buscar</button>
+                </span>
+               <button id="btn-verde" onclick="mostrar('formulario')" title="Incluir atividade">INCLUIR</button>
+            </div>
+            
+            <div class="hidden" id="formulario">
+                <form  id="form">
+                    <div class="container">
+                        <h2>Incluir atividade</h2>
+                        <div class="campos">
+                            <label class="campo"><h3>Nome</h3> 
+                                <input class="entrada" type="text" name="txtNome" required>
+                            </label>
+                            <label class="campo"><h3>Usuário</h3> 
+                                <input class="entrada" type="text" name="txtUsuario" required>
+                            </label>
+                            <label class="campo"><h3>Condição</h3> 
+                                <select name="txtCondicao" id="condicao">
+                                    <option value=""></option>
+                                    <option value="Concluída">Concluída</option>
+                                    <option value="Em andamento">Em andamento</option>
+                                    <option value="Cancelada">Cancelada</option>
+                                </select>
+                            </label>
+                            <label for="data" class="campo"><h3>Data</h3> 
+                                <input class="entrada" id="data" type="date" name="txtData" required>
+                            </label>
+                            <label class="campo"><h3>Propriedade</h3> 
+                                <input class="entrada" type="text" name="txtPropriedade" required>
+                            </label>
+                        </div>
+                        <div class="clearfix">
+                            <input type="button"  id="btn-verde" style="margin-left: 280px;" value="SALVAR" onclick="cadAtividade(txtNome.value, txtUsuario.value, txtCondicao.value, txtData.value, txtPropriedade.value)"/>
+                            <button type="button" id="btn-branco" style="margin-left: 50px;" onclick="ocultar('formulario')">CANCELAR</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="table" class="maxWidth">
+                <table id="tabela">
+                    <thead>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
