@@ -4,18 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tela_usuario_2.css">
+    <link rel="stylesheet" href="./tela_usuario_2.css">
+    <script src="./index.js"></script>
     <title>Tela do usuário</title>
 </head>
-<body>
+<body onload="getLocation()">
     <header>
-        <img src="./images/logo-site.svg" alt="Logo do site" id="logo_site"/>
+        <img src="./images/user_icon.svg" alt="Icone de usuário" id="user_icon"/>
+        <span id="user_name">Nome do usuário</span>
         <div id="menu_container">
             <a href="#" class="menu_link">Adicionar animal</a>
-            <a href="../gerenciar-tarefas/index.html" class="menu_link">Gerenciar tarefas</a>
+            <a href="#" class="menu_link">Gerenciar tarefas</a>
             <a href="#" class="menu_link">Visualizar animais</a>
             <a href="#" class="menu_link">Configurações</a>
         </div>
     </header>
+    <section>
+        
+    </section>
+    <section id="filter_animal">
+        <p class="section_title">Filtre o seu animal</p>
+        <form action="POST">
+            <div class="input_container">
+                <label for="id">ID</label>
+                <input type="text" id="id" class="user_input">
+                <label for="type_race">Raça</label>
+                <select id="type_race" class="user_input">
+                    <option>Angus</option>
+                    <option>Nelore</option>
+                    <option>Brahman</option>
+                    <option>Brangus</option>
+                    <option>Senepol</option>
+                    <option>Hereford</option>
+                    <option>Caracu</option>
+                </select>
+            </div>
+            <div class="input_container">
+                <label for="sexo">Sexo</label>
+                <select id="sexo"  class="user_input">
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                </select>
+                <label for="vacina">Vacina</label>
+                <select id="vacina" class="user_input">
+                    <option>Raiva</option>
+                    <option>Aftosa</option>
+                    <option>Brucelose</option>
+                    <option>IBR</option>
+                    <option>BVD</option>
+                </select>
+            </div>
+        </form>
+    </section>
+    <section>
+        <p class="section_title">Visualizar Animais</p>
+        <div id="map"></div>
+    </section>
+        <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4rJoJBgsdebxeqGgWCQO-5HRH1U18vKI&callback=initMap&v=weekly"
+      async
+    ></script>
 </body>
 </html>
