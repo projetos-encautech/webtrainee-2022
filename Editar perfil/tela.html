@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="test.css">
+
+    <title>Editar Perfil</title>
+</head>
+<style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+        font-family: Roboto;
+    }
+
+    body{
+        background-color: #E0EADDED;
+        color: black;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    .form{
+        background: #d3d3d3;
+        width: 50%;
+        height: 70%;
+        margin: 0 auto;
+        text-align: center;
+        border: 2px solid #097413;
+        border-radius: 10px;
+        margin-top: 50px;
+
+    }
+    input,select{
+        border-radius: 10px;
+        height: 30px;
+        border: none;
+
+    }
+    input[type="submit"]{
+        cursor:pointer;
+        border-radius: 5px;
+        border:none;
+        width: 80px;
+        height: 35px;
+
+    }
+    input[type="button"]{
+        cursor:pointer;
+        border-radius: 5px;
+        border:none;
+        width: 80px;
+        height: 35px;
+        
+    }
+    input[type="submit"]{
+        background:#097413 ;
+        color: #fff;
+    }
+    input[type="button"]{
+        background:#097413 ;
+        color: #fff;
+    }
+   input[type="text"]{
+        width: 200px;
+        height: 30px;
+        left: 630px;
+        top: 452px;
+    }
+</style>
+<body>
+    <div class="form"> 
+        <form method="post" action="index.php"><br>
+            <h1>Sistema de Clientes</h1> </form><br>
+            <h2>Editar Perfil</h2><br><br>
+            <label for="nome">Nome:</label>
+            <input type="text" size="40"placeholder="Nome Completo">
+            <label for="cpf">CPF:</label>
+            <input type="text"placeholder="231.231.321-00"><br><br>
+            <label for="email">Email:</label>
+            <input type="text"size="40"placeholder="Exemplo@gmail.com"><br><Br>
+
+            
+            <label>Senha: <input type="password" name="password" id="senha"placeholder="Senh@123"></label> &nbsp;
+            <label>Confirme sua senha: <input type="password" name="password" id="senha"placeholder="Senh@123"></label> <br><br>
+            
+
+            <label for="rg">RG:</label>
+            <input type="text"placeholder="166.344.000-22"><br><br>
+            <label for="sexo">Sexo:</label> &nbsp;
+            <label for="mas">Masculino</label>
+            <input type="radio" name="opcao" id="op1">
+            <label for="fem">Feminino</label>
+            <input type="radio" name="opcao" id="op1">
+            <label for="outro">Outros</label>
+            <input type="radio" name="opcao" id="op1"><br><br>
+            <label for="data">Data de Nascimento:</label>
+            <input type="date" name="data" id="data"><br><br>
+            <h2>Endereço</h2><br><Br>
+            <label for="uf">Estado:</label>
+            <select name="estado" id="uf">
+                <option value="0">Escolha sua Região</option>
+                <optgroup label="Norte">
+                    <option value="1">Acre</option>
+                    <option value="2">Amazonas</option>
+                    <option value="3">Amapá</option>
+                    <option value="4">Pará</option>
+                    <option value="5">Rondônia</option>
+                    <option value="6">Roraima</option>
+                    <option value="7">Tocantins</option>
+                </optgroup>
+
+                <optgroup label="Nordeste">
+                    <option value="8">Alagoas</option>
+                    <option value="9">Bahia</option>
+                    <option value="10">Ceará</option>
+                    <option value="11">Maranhão</option>
+                    <option value="12">Piaui</option>
+                    <option value="13">Pernambuco</option>
+                    <option value="14">Paraíba</option>
+                    <option value="15">Rio Grande do Norte</option>
+                    <option value="16">Sergipe</option>
+                </optgroup>
+
+                <optgroup label="Centro-Oeste">
+                    <option value="17">Goiás</option>
+                    <option value="18">Mata Grosso</option>
+                    <option value="19">Mata Grosso do Sul</option>
+                    <option value="20">Distrito Federal</option>
+                </optgroup>
+
+                <optgroup label="Sudeste">
+                    <option value="21">Espirito Santo</option>
+                    <option value="22">Minas Gerais</option>
+                    <option value="23">Rio de Janeiro</option>
+                    <option value="24">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Sul">
+                    <option value="25">Paraná</option>
+                    <option value="26">Rio Grande do Sul</option>
+                    <option value="27">Santa Catarina</option>
+                </optgroup>
+
+            </select>
+            <label for="Cidade">Cidade:</label>
+            <input type="text"placeholder=" Cidade"><br><br>
+            <label for="cep">CEP:</label>
+            <input type="text"placeholder="20065-000">
+            <label for="bairro">Bairro:</label>
+            <input type="text"placeholder="Bairro"><br><Br>
+            <label for="rua">Rua:</label>
+            <input type="text"size="30"placeholder="Logradouro">
+            <label for="nu">Número</label>
+            <input type="text"size="5"placeholder="Número"><br><br>
+            <label for="comp">Complemento</label>
+            <input type="text"size="30"placeholder=" Andar,apartamento, bloco">
+            <a href="../TelaUsuario_2/tela_usuario_2.html" style="text-decoration: none;">
+            <input type="submit" value="Salvar"> &nbsp; &nbsp;
+            </a>
+            <a href="../TelaUsuario_2/tela_usuario_2.html" style="text-decoration: none;">
+            <input type="button" value="Cancelar"> </a> <br><br>
+
+        </form>    
+    </div>
+</body>
+</html>
