@@ -113,7 +113,8 @@ header .menu-principal a:hover{
    font-weight: 380;
 }
 #user_icon{
-    margin-right: 54px;
+    margin-right: 15px;
+    
     padding: 5px;
     background-color: #C4C4C4;;
     border-radius: 50%;
