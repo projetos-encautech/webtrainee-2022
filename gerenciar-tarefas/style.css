@@ -112,6 +112,26 @@ header .menu-principal a:hover{
    font-size: 20px;
    font-weight: 380;
 }
+#user_icon{
+    margin-right: 54px;
+    padding: 5px;
+    background-color: #C4C4C4;;
+    border-radius: 50%;
+}
+
+#user_name{
+    margin-left: 40px;
+    font-size: 40px;
+    margin-right: 65px;
+    color: #FFFFFF;
+}
+header .menu_container a{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 380;
+    text-decoration:none;
+}
 
 
 .menu-principal figure.photo-profile{

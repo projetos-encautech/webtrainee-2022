@@ -12,6 +12,76 @@ header{
     background-color:#184528DB;
 }
 
+nav ul ul {
+    display: none;
+}
+nav ul li:hover > ul {
+    display: block;
+}
+nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+	padding: 0 20px;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+
+nav ul li {
+  float: left;
+}
+nav ul li:hover {
+  opacity: 0.8;
+}
+nav ul li:hover a {
+  color: #fff;
+}
+		
+nav ul li a {
+  display: block; 
+  padding: 15px 20px;
+  color: #757575; 
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 380;
+}
+
+nav ul ul {
+  background: #9FB4A1; 
+  border-radius: 0 0 15px 15px; 
+  padding: 0;
+  position: absolute; 
+  top: 100%;
+}
+		
+nav ul ul li a {
+  padding: 15px 20px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 380;
+
+}	
+				
+
+nav ul ul ul {
+  position: absolute; 
+  left: 100%; 
+  top:0;
+}
+
+header .menu_container a{
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     font-size: 20px;
+     font-weight: 380;
+     text-decoration:none;
+}
+
 #user_icon{
     margin-right: 54px;
     padding: 5px;
