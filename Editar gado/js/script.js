@@ -1,5 +1,4 @@
 
-//function validarCampos(){
 
 
 class Validator {
@@ -198,10 +197,7 @@ class Validator {
     e.preventDefault();
   
     validator.validate(form);
-    alert("Está valido");
   });
-  window.open("https://www.w3schools.com");
+  
 
-  //return true;
 
-//}
