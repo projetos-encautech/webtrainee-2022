@@ -54,14 +54,14 @@ INFOS = {
 					
 					if(u != null){
 						
-						alert("PDados corretos para o usuario: " + u.email);
+						alert("Dados corretos para o usuario: " + u.email);
 						return true;                      
 					} 
-					alert("CDados incorretos, tente novamente.");
+					alert("Dados incorretos, tente novamente.");
 					return false;
-				}              
+				}               
               
-                alert("JDados incorretos, tente novamente.");
+                alert("Dados incorretos, tente novamente.");
                 return false;
                 },
             voltaTelaLogin : function(){

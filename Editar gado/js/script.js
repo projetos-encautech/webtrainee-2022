@@ -1,3 +1,7 @@
+
+//function validarCampos(){
+
+
 class Validator {
 
     constructor() {
@@ -124,8 +128,9 @@ class Validator {
   
       if(inputValue === '') {
         let errorMessage = `Este campo é obrigatório`;
-  
+        
         this.printMessage(input, errorMessage);
+        return false;
       }
   
     }
@@ -193,4 +198,10 @@ class Validator {
     e.preventDefault();
   
     validator.validate(form);
+    alert("Está valido");
   });
+  window.open("https://www.w3schools.com");
+
+  //return true;
+
+//}
