@@ -1,3 +1,4 @@
+
 class Validator {
 
     constructor() {
@@ -59,6 +60,7 @@ class Validator {
   
       if(inputLength < minValue) {
         this.printMessage(input, errorMessage);
+        return false;
       }
   
     }
@@ -72,6 +74,7 @@ class Validator {
   
       if(inputLength > maxValue) {
         this.printMessage(input, errorMessage);
+        return false;
       }
   
     }
@@ -87,6 +90,7 @@ class Validator {
   
       if(!re.test(inputValue)) {
         this.printMessage(input, errorMessage);
+        return false;
       }
   
     }
@@ -101,6 +105,7 @@ class Validator {
   
       if(!re.test(email)) {
         this.printMessage(input, errorMessage);
+        return false;
       }
   
     }
@@ -114,6 +119,7 @@ class Validator {
   
       if(input.value != inputToCompare.value) {
         this.printMessage(input, errorMessage);
+        return false;
       }
     }
     
@@ -124,6 +130,7 @@ class Validator {
   
       if(inputValue === '') {
         let errorMessage = `Este campo é obrigatório`;
+        return false;
   
         this.printMessage(input, errorMessage);
       }
@@ -149,7 +156,7 @@ class Validator {
   
       if(uppercases === 0 || numbers === 0) {
         let errorMessage = `A senha precisa um caractere maiúsculo e um número`;
-  
+        return false;
         this.printMessage(input, errorMessage);
       }
   
@@ -194,5 +201,3 @@ class Validator {
   
     validator.validate(form);
   });
-
- 
