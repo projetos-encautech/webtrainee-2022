@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+    <!--Relaciona o uso do script com o Login-->
+       
+    <head>
+        <meta charset="UTF-8">
+        <title>Recuperar senha</title>
+        <link rel="stylesheet" type="text/css" href="styleTelaLogin.css">
+        <link rel="icon" type="image/gif" href="./icone-aba.gif">
+        <script type="text/javascript" src="script.js"></script> 
+    </head>
+
+    <body onload="INFO.Functions.Login.load();">
+        <div class="tela-Login">
+            <h1>Recuperar Senha</h1> 
+            <label>E-mail</label><br>
+            <input type="text" placeholder="E-mail" name="email"><br><br>
+            <label>Enviar codigo de recuperação</label><br><br>
+            <button class="ebutton btn-block btn-entrar" type="submit" onclick="INFOS.Functions.EsqueciSenha.EnviaSenhaRecuperacao();"> Enviar </button><br><br>      
+            <button class="rebutton btn-block btn-entrar" type="submit" onclick="INFOS.Functions.Login.voltaTelaLogin();" > Voltar </button><br><br>
+        </div>        
+    </body>
+</html>
