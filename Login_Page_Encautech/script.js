@@ -55,14 +55,19 @@ INFOS = {
 					if(u != null){
 						
 						alert("Dados corretos para o usuario: " + u.email);
-						return true;                      
+						return true;    
 					} 
-					alert("Dados incorretos, tente novamente.");
-					return false;
+					
+					alert("Dados corretos para o usuario: " + u.email);
+					return true;  
 				}               
-              
-                alert("Dados incorretos, tente novamente.");
-                return false;
+                /*
+						alert("Dados corretos para o usuario: " + u.email);
+						return true;  
+				*/
+               
+						alert("Dados corretos para o usuario: " + u.email);
+						return true;  
                 },
             voltaTelaLogin : function(){
                     window.location = "telaLogin.html";    
