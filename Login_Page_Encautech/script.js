@@ -56,8 +56,9 @@ INFOS = {
 						
 						alert("Dados corretos para o usuario: " + u.email);
 						return true;                      
-					}               
-
+					} 
+					alert("Dados incorretos, tente novamente.");
+					return false;
 				}               
               
                 alert("Dados incorretos, tente novamente.");
